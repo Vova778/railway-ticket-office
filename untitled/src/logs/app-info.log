@@ -1,0 +1,2 @@
+2022-08-28 21:08:39 INFO User : User{id=0, login='Vova778', firstName='Vova', lastName='Kor', phone=1111111111, admin=false} was inserted successfully
+2022-08-28 21:10:05 INFO User : User{id=0, login='Vova778', firstName='Vova', lastName='Kor', phone=1111111111, admin=false} was inserted successfully
