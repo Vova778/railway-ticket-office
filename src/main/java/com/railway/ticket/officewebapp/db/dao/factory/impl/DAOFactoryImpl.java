@@ -23,6 +23,11 @@ public class DAOFactoryImpl extends DAOFactory {
     }
 
     @Override
+    public ScheduleDAO getScheduleDAO() throws SQLException {
+        return new ScheduleDAOImpl(dataSource.getConnection());
+    }
+
+    @Override
     public TrainDAO getTrainDAO() throws SQLException {
         return new TrainDAOImpl(dataSource.getConnection());
     }

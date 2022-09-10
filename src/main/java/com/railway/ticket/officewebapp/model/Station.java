@@ -13,6 +13,12 @@ public class Station implements Serializable {
         this.name = name;
     }
 
+
+
+    public Station() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -55,5 +61,25 @@ public class Station implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Station station = (Station) o;
+
+        if (id != station.id) return false;
+        if (name != null ? !name.equals(station.name) : station.name != null) return false;
+        return connectingStations != null ? connectingStations.equals(station.connectingStations) : station.connectingStations == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (connectingStations != null ? connectingStations.hashCode() : 0);
+        return result;
     }
 }

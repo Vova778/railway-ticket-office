@@ -1,5 +1,5 @@
 package com.railway.ticket.officewebapp.db.dao.connections;
-import com.railway.ticket.officewebapp.db.MySQLConstants;
+import com.railway.ticket.officewebapp.db.Constants;
 import org.apache.commons.dbcp2.BasicDataSource;
 import javax.sql.DataSource;
 
@@ -12,7 +12,7 @@ public class ConnectionPoolHolder {
         if(dataSource == null){
             synchronized (ConnectionPoolHolder.class){
                 BasicDataSource basicDataSource = new BasicDataSource();
-                basicDataSource.setUrl(MySQLConstants.URL);
+                basicDataSource.setUrl(Constants.URL);
                 basicDataSource.setUsername("root");
                 basicDataSource.setPassword("Vova778ltym1");
                 basicDataSource.setMinIdle(6);

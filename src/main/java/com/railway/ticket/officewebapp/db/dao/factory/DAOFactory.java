@@ -20,6 +20,7 @@ public abstract class DAOFactory {
 
     public abstract UserDAO getUserDAO() throws SQLException;
     public abstract StationDAO getStationDAO() throws SQLException;
+    public abstract ScheduleDAO getScheduleDAO() throws SQLException;
     public abstract TrainDAO getTrainDAO() throws SQLException;
     public abstract TicketDAO getTicketDAO() throws SQLException;
     public abstract RouteDAO getRouteDAO() throws SQLException;

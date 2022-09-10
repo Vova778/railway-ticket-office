@@ -14,6 +14,10 @@ public class Train implements Serializable {
         this.seats = seats;
     }
 
+    public Train() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -36,15 +40,7 @@ public class Train implements Serializable {
         this.seats = seats;
     }
 
-    public void setAvailableSeats(int availableSeats) {
-        if (availableSeats < 0) {
-            throw new IllegalArgumentException("Available seats cannot be < 0");
-        }
-        if (availableSeats < seats) {
-            throw new IllegalArgumentException("Available seats cannot be > total seats");
-        }
-        this.availableSeats = availableSeats;
-    }
+
 
 
     public Map<Date, Schedule> getSchedules() {
@@ -82,7 +78,6 @@ public class Train implements Serializable {
         return "Train{" +
                 "id=" + id +
                 ", totalSeats=" + seats +
-                ", availableSeats=" + availableSeats +
                 ", routes=" + schedules +
                 '}';
     }
